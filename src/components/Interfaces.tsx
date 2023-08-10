@@ -18,4 +18,5 @@ export interface ICharacter {
 
 export interface CharacterCardProps {
   results: ICharacter[] | null;
+  page: string;
 }

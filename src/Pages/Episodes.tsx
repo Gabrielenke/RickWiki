@@ -51,7 +51,7 @@ const Episodes = () => {
         </div>
         <div className="flex max-w-[80vw]  text-white">
           <div className="flex flex-wrap  gap-10 ">
-            <CharacterCard results={results} />
+            <CharacterCard page="/episode/" results={results} />
           </div>
         </div>
       </div>

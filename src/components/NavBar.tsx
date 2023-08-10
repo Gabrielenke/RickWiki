@@ -10,7 +10,6 @@ const NavBar = () => {
       <nav className="mr-10 flex gap-10 text-2xl text-white">
         <CustomLink href="/" title="Characters" />
         <CustomLink href="/Episodes" title="Episodes" />
-        <CustomLink href="/Location" title="Location" />
       </nav>
     </header>
   );
