@@ -5,7 +5,7 @@ interface ISearchBar {
   setPageNumber: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const SearchBar = (props: ISearchBar) => {
+const SearchBar = ({ setPageNumber, setSearch }: ISearchBar) => {
   return (
     <>
       <form className="mx-auto flex max-w-[80vw] flex-col items-center justify-center ">
@@ -15,8 +15,8 @@ const SearchBar = (props: ISearchBar) => {
         <div className="flex items-center gap-5">
           <input
             onChange={(e) => {
-              props.setPageNumber(1);
-              props.setSearch(e.target.value);
+              setPageNumber(1);
+              setSearch(e.target.value);
               console.log(e.target.value);
             }}
             className="w-[40vw] rounded-md border-2 border-solid border-black py-2 pl-2 focus:outline-none "

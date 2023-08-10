@@ -7,15 +7,15 @@ interface ILink {
   className?: string;
 }
 
-const CustomLink = (Props: ILink) => {
+const CustomLink = ({ href, title, className = '' }: ILink) => {
   const locationUrl = useLocation();
   return (
-    <Link to={Props.href} className={`${Props.className} group relative `}>
-      {Props.title}
+    <Link to={href} className={`${className} group relative `}>
+      {title}
 
       <span
         className={`ease absolute -bottom-1.5 left-0 inline-block h-[2px] bg-white transition-[width] duration-300 group-hover:w-full ${
-          locationUrl.pathname === Props.href ? ' w-full' : 'w-0'
+          locationUrl.pathname === href ? ' w-full' : 'w-0'
         } `}
       ></span>
     </Link>
